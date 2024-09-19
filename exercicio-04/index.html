@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Fotos com Localização</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Fotos com Localização</h1>
+    <div class="container">
+        <button id="takePhotoBtn">Tirar Foto</button>
+        <input type="file" id="uploadPhotoInput" accept="image/*" style="display: none;">
+        <button id="markLocationBtn">Marcar Localização</button>
+        <input type="text" id="titleInput" placeholder="Título" required>
+        <textarea id="descriptionInput" placeholder="Descrição"></textarea>
+        <button id="saveBtn">Salvar</button>
+    </div>
+    <div id="photoContainer"></div>
+    <div id="mapContainer"></div>
+    <table id="photoTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Localização</th>
+                <th>Data</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
